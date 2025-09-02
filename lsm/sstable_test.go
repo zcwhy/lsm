@@ -1,12 +1,13 @@
 package lsm
 
 import (
+	"lsm/entry"
 	"os"
 	"testing"
 )
 
 func TestWrite(t *testing.T) {
-	entries := []*Entry{
+	entries := []*entry.Entry{
 		{Key: "a", Val: []byte("aaaa"), Deleted: false},
 		{Key: "b", Val: []byte("bbbb"), Deleted: false},
 	}

@@ -1,5 +1,7 @@
 package lsm
 
+import "lsm/entry"
+
 type Node struct {
 	Level    int
 	StartKey string
@@ -12,4 +14,8 @@ func NewNode(level int, startKey, endKey string) *Node {
 		StartKey: startKey,
 		EndKey:   endKey,
 	}
+}
+
+func (n *Node) GetAllEntrie() []*entry.Entry {
+
 }

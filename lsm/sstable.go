@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"io"
+	"lsm/entry"
 	"os"
 )
 
@@ -48,7 +49,7 @@ func LoadSStableFromFile(filePath string) *SSTable {
 	return s
 }
 
-func WriteToSStable(datas []*Entry, filePath string) (*SSTable, error) {
+func WriteToSStable(datas []*entry.Entry, filePath string) (*SSTable, error) {
 	f, err := os.OpenFile(filePath, os.O_RDWR, 0666)
 	if err != nil {
 		return nil, err

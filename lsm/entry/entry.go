@@ -1,4 +1,4 @@
-package lsm
+package entry
 
 import (
 	"encoding/json"
